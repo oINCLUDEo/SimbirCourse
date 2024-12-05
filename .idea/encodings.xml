@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/readme.md" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/Airplane.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/Car.java" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/src/Transport.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/readme.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dz1/Airplane.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dz1/Car.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dz1/IRegistration.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dz1/IRepaint.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dz1/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dz1/Transport.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dz2/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dz2/WrongLoginException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dz2/WrongPasswordException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dz2/readme.md" charset="UTF-8" />
     <file url="PROJECT" charset="windows-1251" />
   </component>
 </project>

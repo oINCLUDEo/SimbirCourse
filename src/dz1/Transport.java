@@ -1,3 +1,5 @@
+package dz1;
+
 import java.util.Scanner;
 
 public abstract class Transport {
@@ -5,7 +7,7 @@ public abstract class Transport {
     private int id;
     private String color;
     private String reg_number;
-    private String name = "Транспорт";
+    private String name = "РўСЂР°РЅСЃРїРѕСЂС‚";
     public Scanner scanner = new Scanner(System.in);
 
     public Transport(){
