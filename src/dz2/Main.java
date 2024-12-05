@@ -20,6 +20,8 @@ public class Main {
             System.out.println("Ошибка - " + result);
         }
 
+
+
     }
 
     public static boolean auth(String login, String password, String confirmPassword) {
@@ -44,5 +46,7 @@ public class Main {
     private static boolean isValidPassword(String password, String confirmPassword) {
         return password != null && password.length() < 20 && password.matches("^\\w+$") && password.equals(confirmPassword);
     }
+
+
 }
 
