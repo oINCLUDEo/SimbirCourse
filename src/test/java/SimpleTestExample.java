@@ -1,7 +1,7 @@
 import org.testng.annotations.*;
 import static org.testng.Assert.assertEquals;
 
-public class simpleTestExample {
+public class SimpleTestExample {
     private int number;
 
     @BeforeClass

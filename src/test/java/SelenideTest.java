@@ -20,7 +20,7 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 
 
 public class SelenideTest {
-    private static Logger logger = LoggerFactory.getLogger(loggerExample.class);
+    private static Logger logger = LoggerFactory.getLogger(LoggerExample.class);
 
     @BeforeClass
     void init(){
@@ -34,18 +34,19 @@ public class SelenideTest {
     public void setUpHeadlessConfig() {
         Configuration.headless = true;
     }
+
     @BeforeMethod(onlyForGroups = "non-headless")
     public void setUpNonHeadlessConfig() {
         Configuration.headless = false;
     }
+
     @BeforeMethod(onlyForGroups = "edge")
     public void setUpEdgeConfig() {
         Configuration.browser = "edge";
     }
+
     @BeforeMethod(onlyForGroups = "chrome")
-    public void setUpChromeConfig() {
-        Configuration.browser = "chrome";
-    }
+    public void setUpChromeConfig() { Configuration.browser = "chrome"; }
 
     @Test(groups = {"headless"})
     public void ulstuTest(){
