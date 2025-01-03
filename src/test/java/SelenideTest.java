@@ -60,11 +60,11 @@ public class SelenideTest {
         logger.info("Тест Календаря на сайте УлГТУ");
 
         open("https://ulstu.ru/");
-        SelenideElement calendar = $(By.id("comp_92505226034e58f28aba9a8ff60ad5c8"));
+        SelenideElement calendar = $(By.xpath("//*[contains(@class, calendar)]"));
         scrollToElement(calendar);
 
-        $(By.xpath("//*[@id=\"comp_92505226034e58f28aba9a8ff60ad5c8\"]/div/div[1]/div[2]/ul[4]/li[6]/a")).click();
-        $(By.xpath("//*[@id=\"comp_92505226034e58f28aba9a8ff60ad5c8\"]/div/div[2]/div[1]/p/b")).shouldHave(text("21 декабря 2024 года"));
+        $(By.xpath("//*[contains(@class, calendar_day)]//a[@data-date='30.01.2025']")).click();
+        $(By.xpath("//*[contains(@class, event_header)]/p/b")).shouldHave(text("30 января 2025 года"));
         sleep(1000);
     }
 
@@ -74,12 +74,12 @@ public class SelenideTest {
         actions.moveToElement((WebElement) element).perform();
     }
 
-    @Test(groups = "headless")
+    @Test(groups = {"non-headless", "chrome"})
     public void steamTest(){
         logger.info("Запущен тест кнопки 'войти' на сайте Steam");
 
         open("https://store.steampowered.com/?l=russian");
-        $(By.xpath("//*[@id=\"global_action_menu\"]/a[2]")).shouldBe(visible).click();
+        $(By.xpath("//*[contains(@id, 'global_action_menu')]/a[2]")).shouldBe(visible).click();
         $(By.id("loginModals")).shouldBe(visible);
     }
 
@@ -88,7 +88,7 @@ public class SelenideTest {
         logger.info("Запущен тест ссылки 'О компании' на сайте Steam");
 
         open("https://store.steampowered.com/?l=russian");
-        $(By.xpath("//*[@id=\"footer\"]/div/div[7]/a[1]")).shouldBe(visible).click();
+        $(By.xpath("//*[contains(@class, valve_links)]//a[text()='О Valve']")).shouldBe(visible).click();
         Selenide.switchTo().window(1);
         webdriver().shouldHave(url("https://www.valvesoftware.com/ru/about"));
         sleep(2500);
