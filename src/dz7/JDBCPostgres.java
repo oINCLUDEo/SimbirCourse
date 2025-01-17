@@ -1,4 +1,4 @@
-package org.example;
+package dz7;
 
 import java.sql.*;
 import java.time.LocalDate;
